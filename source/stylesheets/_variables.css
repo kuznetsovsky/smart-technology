@@ -1,1 +1,13 @@
 /* Variables */
+
+:root {
+  --color-text-primary: #070c11; /* main */
+  --color-text-secondary: #838688; /* grey */
+
+  --color-brand-primary: #4878a6; /* blue */
+  --color-brand-secondary: #2a5275; /* dark blue */
+
+  --color-menu-bg: #0e1821; /* menu blue */
+  --color-primary-bg: #ffffff;
+  --color-secondary-bg: #edf2f6; /* light blue */
+}
