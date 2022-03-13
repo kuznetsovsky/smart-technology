@@ -1,1 +1,69 @@
-/* Fonts */
+/* Exo 2 Regular */
+
+@font-face {
+  font-weight: 400;
+  font-family: "Exo 2";
+  font-style: normal;
+  src: url("../fonts/exo2/exo2-regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* Exo 2 Bold */
+
+@font-face {
+  font-weight: 700;
+  font-family: "Exo 2";
+  font-style: normal;
+  src: url("../fonts/exo2/exo2-bold.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* Exo 2 SemiBold */
+
+@font-face {
+  font-weight: 600;
+  font-family: "Exo 2";
+  font-style: normal;
+  src: url("../fonts/exo2/exo2-semi-bold.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* Exo 2 Medium */
+
+@font-face {
+  font-weight: 500;
+  font-family: "Exo 2";
+  font-style: normal;
+  src: url("../fonts/exo2/exo2-medium.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* Roboto Regular */
+
+@font-face {
+  font-weight: 400;
+  font-family: "Roboto";
+  font-style: normal;
+  src: url("../fonts/roboto/roboto-regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* Inter Regular */
+
+@font-face {
+  font-weight: 400;
+  font-family: "Inter";
+  font-style: normal;
+  src: url("../fonts/inter/inter-regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* Source Sans Pro Regular */
+
+@font-face {
+  font-weight: 400;
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  src: url("../fonts/source-sans-pro/source-sans-pro-regular.woff2") format("woff2");
+  font-display: swap;
+}
