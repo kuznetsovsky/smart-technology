@@ -1,2 +1,4 @@
 @import "./blocks/page";
 @import "./blocks/wrapper";
+@import "./blocks/container";
+@import "./blocks/footer";

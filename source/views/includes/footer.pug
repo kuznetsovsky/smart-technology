@@ -1,2 +1,75 @@
+mixin section-item(title, link)
+  li.footer__section-item
+    a.footer__section-link(href=link)!= title
+
+mixin social-item(title, link, lang)
+  li.footer__social-item
+    a.footer__social-link(href=link)
+      if (lang)
+        span.sr-only Страница #[span(lang='en-US')= title ]
+        span.footer__social-icon&attributes(attributes)
+      else
+        span.sr-only Страница #{title}
+        span.footer__social-icon&attributes(attributes)
+
 footer.footer
-  p Footer
+  .footer__container.container
+    h2.sr-only Нижний колонтитул сайта
+    .footer__section-wrapper
+
+      .footer__logo-wrapper
+        a.footer__logo-link(href=currentPage === 'main-page' ? false : 'main.html')
+          img.footer__logo-image(src='./images/logo.svg', alt='Логотип компании', width='184', heigth='60')
+
+        address.footer__address-wrapper
+          h3.sr-only Наши адреса
+          ul.footer__phone-list
+            li.footer__phone-item
+              a.footer__phone-link(href='tel:+79581119503') +7&nbsp;(958)&nbsp;111-95-03
+            li.footer__phone-item
+              a.footer__phone-link(href='tel:+78126605054') +7&nbsp;(812)&nbsp;660-50-54
+          span.footer__working-hours Пн-вс: с&nbsp;#[time(datetime='10:00') 10:00]&nbsp;до #[time(datetime='21:00') 21:00]
+
+          ul.footer__address-list
+            li.footer__address-item Проспект Стачек 67&nbsp;к.5
+            li.footer__address-item Лиговский проспект&nbsp;205
+            li.footer__address-item Гражданский проспект, 116&nbsp;к.5
+
+      section.footer__section-group
+        h3.footer__section-headline О&nbsp;магазине
+        ul.footer__section-list
+          +section-item('Отзывы', '#')
+          +section-item('Наши преимущества', '#')
+          +section-item('История компании', '#')
+          +section-item('Сотрудничество', '#')
+          +section-item('Партнёрская программа', '#')
+          +section-item('Вакансии', '#')
+
+      section.footer__section-group
+        h3.footer__section-headline Для&nbsp;клиента
+        ul.footer__section-list
+          +section-item('Как&nbsp;купить', '#')
+          +section-item('Доставка и&nbsp;оплата', '#')
+          +section-item('Кредит', '#')
+          +section-item('Политика конфиденциальности', '#')
+          +section-item('Вопросы и&nbsp;ответы (F.A.Q.)', '#')
+          +section-item('Сервис и&nbsp;гарантия', '#')
+
+      section.footer__section-group.footer__section-group--last
+        h3.footer__section-headline Сотрудничество
+        ul.footer__section-list
+          +section-item('Оптом', '#')
+          +section-item('Дропшиппинг', '#')
+
+    hr.footer__separator
+
+    .footer__legal-wrapper
+
+      ul.footer__social-list
+        +social-item('Twitter', '#', true).footer__social-icon--tw
+        +social-item('Facebook', '#', true).footer__social-icon--fb
+        +social-item('Вконтакте', '#').footer__social-icon--vk
+        +social-item('Instagram', '#', true).footer__social-icon--inst
+
+      p.footer__copyright SmartТехника&nbsp;&copy; 2021&nbsp;Все&nbsp;права защищены
+      span.footer__developed Cверстано: #[a.footer__developed-link(href='https://github.com/kuznetsovsky') kuznetsovsky]

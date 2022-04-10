@@ -5,6 +5,7 @@
   color: var(--color-text-primary);
   font-size: 100%;
   font-family: "Exo 2", sans-serif;
+  line-height: 1.2;
   background-color: var(--color-primary-bg);
 }
 

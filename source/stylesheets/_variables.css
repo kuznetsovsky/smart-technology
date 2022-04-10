@@ -10,4 +10,6 @@
   --color-menu-bg: #0e1821; /* menu blue */
   --color-primary-bg: #ffffff;
   --color-secondary-bg: #edf2f6; /* light blue */
+
+  --outline-style: 3px solid var(--color-brand-secondary);
 }
