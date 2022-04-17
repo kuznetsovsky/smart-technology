@@ -1,0 +1,15 @@
+include news-data.pug
+include news-card.pug
+
+- var filteredNews = allNews.slice(0, 2);
+
+.section
+  .container
+    h2.headline
+      span.headline__text Новости
+      a.link(href='./all-news.html') Читать все
+
+    ul.news-list
+      each news in filteredNews
+        li.news-list__item
+          +card-news(news)

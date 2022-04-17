@@ -1,0 +1,67 @@
+/* Breadcrumbs */
+
+.breadcrumbs {
+  padding-top: 22px;
+}
+
+@media (min-width: 56.25em) { /* 900px */
+  .breadcrumbs {
+    padding-top: 32px;
+  }
+}
+
+/* Breadcrumbs List */
+
+.breadcrumbs__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* Breadcrumbs Link */
+
+.breadcrumbs__link {
+  display: inline-block;
+  margin-top: 8px;
+  margin-right: 5px;
+  color: inherit;
+  font-size: 1rem; /* 16px */
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.breadcrumbs__link:focus {
+  outline: var(--outline-style);
+}
+
+@supports selector(:focus-visible) {
+  .breadcrumbs__link:focus {
+    outline: 0;
+  }
+}
+
+.breadcrumbs__link:focus-visible {
+  outline: var(--outline-style);
+}
+
+/* Breadcrumbs Link: No Link */
+
+.breadcrumbs__link--no-link {
+  color: var(--color-text-secondary);
+}
+
+/* Breadcrumbs Link: Delimiter */
+
+.breadcrumbs__link--delimiter::after {
+  display: inline-block;
+  width: 6px;
+  height: 11px;
+  margin: 0 10px 0 15px;
+  mask-image: url("../images/icons/arrow-icon.svg");
+  background-color: var(--color-text-primary);
+  background-repeat: no-repeat;
+  background-size: 6px 11px;
+  content: "";
+}

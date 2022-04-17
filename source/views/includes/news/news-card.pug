@@ -1,0 +1,11 @@
+mixin card-news(news, image=false)
+  article.news-card(class=image ? 'news-card--with-image' : false)
+    if (image)
+      img.news-card__image(src=news.image, alt='', width='240', height='160')
+    .news-card__content
+      h3.news-card__headline
+        a.news-card__link(href='./inner-news.html')= news.title
+      p.news-card__description!= news.description
+      footer.news-card__footer
+        a.link(href='./inner-news.html') Подробнее
+        time.news-card__time(datetime= news.datetime)= news.time

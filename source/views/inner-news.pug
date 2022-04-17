@@ -1,0 +1,12 @@
+extends layouts/layout.pug
+
+append variables
+  - var title = "Открытие нового магазина"
+  - var currentPage = "inner-news-page"
+  - var isAuthorized = false
+  - var headline = "Открытие нового магазина"
+
+block content
+  main(class=currentPage)
+    include ./includes/breadcrumbs.pug
+    include ./includes/news/inner-news.pug

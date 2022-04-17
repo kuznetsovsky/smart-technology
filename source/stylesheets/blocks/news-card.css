@@ -1,0 +1,130 @@
+/* News Card */
+
+.news-card {
+  position: relative;
+  padding: 20px;
+  background-color: var(--color-secondary-bg);
+  border-radius: 8px;
+}
+
+@media (min-width: 37.5em) { /* 600px */
+  .news-card {
+    padding: 30px 50px;
+  }
+}
+
+/* News Card With Image */
+
+@media (min-width: 37.5em) { /* 600px */
+  .news-card--with-image {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 150px 1fr;
+    padding: 30px;
+  }
+}
+
+/* News Card Content */
+
+.news-card__content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* News Card Image */
+
+.news-card__image {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 240 / 160;
+  background-color: #c4c4c4;
+}
+
+@media (min-width: 37.5em) { /* 600px */
+  .news-card--with-image .news-card__image {
+    aspect-ratio: 150 / 160;
+    height: 100%;
+  }
+}
+
+/* News Card Headline */
+
+.news-card__headline {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 1.12rem; /* 18px */
+}
+
+@media (min-width: 37.5em) { /* 600px */
+  .news-card__headline {
+    font-size: 1.75rem; /* 28px */
+  }
+}
+
+/* News Card Link */
+
+.news-card__link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.news-card__link:hover {
+  color: var(--color-brand-secondary);
+}
+
+.news-card__link:focus {
+  outline: var(--outline-style);
+  outline-offset: 3px;
+}
+
+@supports selector(:focus-visible) {
+  .news-card__link:focus {
+    outline: 0;
+  }
+}
+
+.news-card__link:focus-visible {
+  outline: var(--outline-style);
+  outline-offset: 3px;
+}
+
+.news-card__link::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  content: "";
+}
+
+/* News Card Description */
+
+.news-card__description {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 1rem; /* 16px */
+  line-height: 1.2;
+}
+
+/* News Card Footer */
+
+.news-card__footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+/* News Card Time */
+
+.news-card__time {
+  margin-left: 0.5rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  font-size: 1rem; /* 16px */
+  line-height: 1.2;
+}

@@ -1,0 +1,14 @@
+include news-data.pug
+include news-card.pug
+
+section.all-news
+  .container
+    h2.headline Новости
+
+    ul.news-list
+      each news in allNews
+        li.news-list__item
+          +card-news(news, images=true)
+
+    .all-news__pagination
+      include ../pagination.pug

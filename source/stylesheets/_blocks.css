@@ -2,3 +2,13 @@
 @import "./blocks/wrapper";
 @import "./blocks/container";
 @import "./blocks/footer";
+@import "./blocks/main-page";
+@import "./blocks/section";
+@import "./blocks/headline";
+@import "./blocks/link";
+@import "./blocks/news-list";
+@import "./blocks/news-card";
+@import "./blocks/all-news";
+@import "./blocks/breadcrumbs";
+@import "./blocks/pagination";
+@import "./blocks/inner-news";
