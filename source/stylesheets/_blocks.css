@@ -15,3 +15,6 @@
 @import "./blocks/about-section";
 @import "./blocks/assortment-section";
 @import "./blocks/advantages-section";
+@import "./blocks/content-wrapper";
+@import "./blocks/warranty";
+@import "./blocks/content";

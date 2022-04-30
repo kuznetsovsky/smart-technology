@@ -1,0 +1,12 @@
+extends layouts/layout.pug
+
+append variables
+  - var title = "Гарантийные условия"
+  - var currentPage = "warranty-page"
+  - var isAuthorized = false
+  - var headline = "Гарантийные условия"
+
+block content
+  main(class=currentPage)
+    include ./includes/breadcrumbs.pug
+    include ./includes/warranty/warranty-layout.pug

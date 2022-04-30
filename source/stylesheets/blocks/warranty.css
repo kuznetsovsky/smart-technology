@@ -1,0 +1,43 @@
+/* Warranty */
+
+.warranty {
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+@media (min-width: 48em) {
+  .warranty {
+    padding-bottom: 60px;
+  }
+}
+
+@media (min-width: 64em) {
+  .warranty {
+    padding-bottom: 80px;
+  }
+}
+
+/* Address */
+
+.warranty__address {
+  font-weight: 600;
+  font-size: 1.25rem;
+  font-style: normal;
+  line-height: 1.2;
+}
+
+.warranty__address > :last-child {
+  margin-bottom: 0;
+}
+
+/* Color Gray */
+
+.warranty-text-grey {
+  color: var(--color-text-secondary);
+}
+
+/* Bg Warn */
+
+.warranty-warn {
+  background-color: #ffff00;
+}

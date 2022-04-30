@@ -1,0 +1,118 @@
+.content {
+  font-size: 1rem; /* 16px */
+  line-height: 1.3;
+}
+
+.content > :first-child {
+  margin-top: 0;
+}
+
+.content > :last-child {
+  margin-bottom: 0;
+}
+
+/* Reset Margin */
+
+.content > dl,
+.content > ul,
+.content > ol,
+.content > p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Description List */
+
+.content dl {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+.content > dl > dt,
+.content > dl > dd {
+  display: inline;
+}
+
+.content > dl > dd {
+  margin-left: 0;
+}
+
+/* Paragraph */
+
+.content p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* List */
+
+.content ol,
+.content ul {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+/* Embeded Resource */
+
+.content img,
+.content video,
+.content audio {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Headline */
+
+.content h2 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.content h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 1.25rem; /* 20px*/
+  line-height: 1.2;
+}
+
+@media (min-width: 48em) {
+  .content h3 {
+    font-size: 1.5rem; /* 24px*/
+  }
+}
+
+@media (min-width: 48em) {
+  .content h3 {
+    margin-top: 40px;
+  }
+}
+
+/* Link */
+
+.content a[href] {
+  color: var(--color-brand-secondary);
+  font-size: inherit;
+  text-decoration: none;
+}
+
+.content a:focus {
+  outline: var(--outline-style);
+  outline-offset: 3px;
+}
+
+@supports selector(:focus-visible) {
+  .content a:focus {
+    outline: 0;
+  }
+}
+
+.content a:focus-visible {
+  outline: var(--outline-style);
+  outline-offset: 3px;
+}
+
+/* Modificators */

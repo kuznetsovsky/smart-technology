@@ -1,9 +1,9 @@
 mixin breadcrumbs-item(text, href)
   li.breadcrumbs__item
     if (href)
-      a.breadcrumbs__link.breadcrumbs__link--delimiter(href=href)= text
+      a.breadcrumbs__link.breadcrumbs__link--delimiter(href=href)!= text
     else
-      a.breadcrumbs__link.breadcrumbs__link--no-link= text
+      a.breadcrumbs__link.breadcrumbs__link--no-link!= text
 
 section.breadcrumbs
   .container
@@ -18,3 +18,6 @@ section.breadcrumbs
       if currentPage === 'about-us-page'
         +breadcrumbs-item('Главная', './main.html')
         +breadcrumbs-item('О нас')
+      if currentPage === 'warranty-page'
+        +breadcrumbs-item('Главная', './main.html')
+        +breadcrumbs-item('Сервис и&nbsp;гарантия')
