@@ -1,0 +1,79 @@
+/* About */
+
+.about {
+  padding: 30px 0;
+}
+
+@media (min-width: 48em) {
+  .about {
+    padding-bottom: 40px;
+  }
+}
+
+/* Headline */
+
+.about__headline {
+  margin: 30px 0 20px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+@media (min-width: 48em) {
+  .about__headline {
+    font-size: 1.5rem; /* 24px */
+  }
+}
+
+@media (min-width: 64em) {
+  .about__headline {
+    margin-top: 40px;
+  }
+}
+
+/* Wrapper */
+
+@media (min-width: 64em) {
+  .about__wrapper {
+    max-width: 975px;
+  }
+}
+
+/* Text */
+
+.about__text {
+  margin: 20px 0;
+  font-size: 1rem; /* 16px */
+  line-height: 1.3;
+}
+
+.about__text:last-of-type {
+  margin-bottom: 0;
+}
+
+.about__text:first-of-type {
+  margin-top: 0;
+}
+
+/* List */
+
+.about__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.about__list > li:last-child {
+  margin-bottom: 0;
+}
+
+.about__list > li:first-child {
+  margin-top: 0;
+}
+
+/* Item */
+
+.about__item {
+  margin: 16px 0;
+  font-weight: 700;
+}

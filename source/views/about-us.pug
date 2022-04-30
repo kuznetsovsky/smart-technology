@@ -1,0 +1,14 @@
+extends layouts/layout.pug
+
+append variables
+  - var title = "О нас"
+  - var currentPage = "about-us-page"
+  - var isAuthorized = false
+  - var headline = "О нас"
+
+block content
+  main(class=currentPage)
+    include ./includes/breadcrumbs.pug
+    include ./includes/about/about-section.pug
+    include ./includes/about/assortment-section.pug
+    include ./includes/about/advantages-section.pug
