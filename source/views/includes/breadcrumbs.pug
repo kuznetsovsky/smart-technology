@@ -21,3 +21,10 @@ section.breadcrumbs
       if currentPage === 'warranty-page'
         +breadcrumbs-item('Главная', './main.html')
         +breadcrumbs-item('Сервис и&nbsp;гарантия')
+      if currentPage === 'all-stocks-page'
+        +breadcrumbs-item('Главная', './main.html')
+        +breadcrumbs-item('Акции')
+      if currentPage === 'inner-stock-page'
+        +breadcrumbs-item('Главная', './main.html')
+        +breadcrumbs-item('Акции', './stock.html')
+        +breadcrumbs-item('Скидка в&nbsp;ДЕНЬ РОЖДЕНИЯ (неделя до/после)')

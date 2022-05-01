@@ -1,7 +1,10 @@
 include ../card-data.pug
 include ../card.pug
+include ../../stock/stock-data.pug
+include ../../stock/stock-card.pug
 
 - var filteredProducts = allProducts.slice(0, 4);
+- var filteredStocks = [allStock[2], allStock[3]]
 
 section.section
   .container
@@ -13,3 +16,9 @@ section.section
       each product in filteredProducts
         li.section__product-item
           +card(product)
+
+    .section__stock-wrapper
+      ul.stock-list
+        each stock in filteredStocks
+          li.stock-list__item
+            +stock-card(stock)

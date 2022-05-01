@@ -1,0 +1,137 @@
+/* Stock Card */
+
+.stock-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 130px;
+  overflow: hidden;
+  background-color: var(--color-secondary-bg);
+  border-radius: 4px;
+}
+
+@media (min-width: 42.5em) {
+  .stock-card {
+    min-height: 180px;
+  }
+}
+
+/* Content */
+
+.stock-card__content {
+  max-width: 230px;
+  padding: 20px 0 20px 20px;
+}
+
+@media (min-width: 42.5em) {
+  .stock-card__content {
+    max-width: 410px;
+    padding: 30px 0 40px 40px;
+  }
+}
+
+/* Title */
+
+.stock-card__title {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+@media (min-width: 42.5em) {
+  .stock-card__title {
+    font-size: 1.75rem;
+  }
+}
+
+/* Link */
+
+.stock-card__link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.stock-card__link:hover {
+  color: var(--color-brand-secondary);
+}
+
+.stock-card__link:focus {
+  outline: var(--outline-style);
+  outline-offset: 3px;
+}
+
+@supports selector(:focus-visible) {
+  .stock-card__link:focus {
+    outline: 0;
+  }
+}
+
+.stock-card__link:focus-visible {
+  outline: var(--outline-style);
+  outline-offset: 3px;
+}
+
+.stock-card__link::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  content: "";
+}
+
+/* Image Werapper */
+
+.stock-card__image-wrapper {
+  position: relative;
+  display: flex;
+  flex-grow: 0;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 130px;
+}
+
+@media (min-width: 42.5em) {
+  .stock-card__image-wrapper {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+/* Picture */
+
+.stock-card__picture {
+  width: inherit;
+  height: inherit;
+}
+
+/* Image */
+
+.stock-card__image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  padding: 0.5rem;
+}
+
+/* Modificator: birthday */
+
+.stock-card.stock-card--birthday {
+  background-color: #b0cfd1;
+}
+
+.stock-card--birthday .stock-card__image {
+  padding: 0;
+}

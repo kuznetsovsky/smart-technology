@@ -1,0 +1,12 @@
+extends layouts/layout.pug
+
+append variables
+  - var title = "Скидка в&nbsp;ДЕНЬ РОЖДЕНИЯ (неделя до/после)"
+  - var currentPage = "inner-stock-page"
+  - var isAuthorized = false
+  - var headline = "Акция"
+
+block content
+  main(class=currentPage)
+    include ./includes/breadcrumbs.pug
+    include ./includes/stock/inner-stock-layout.pug

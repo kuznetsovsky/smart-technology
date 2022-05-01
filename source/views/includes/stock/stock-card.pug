@@ -1,0 +1,10 @@
+mixin stock-card(stock)
+  article.stock-card(class=stock.birthday ? 'stock-card--birthday' : false)
+    .stock-card__content
+      h3.stock-card__title
+        a.stock-card__link(href='./inner-stock.html')!= stock.title
+    .stock-card__image-wrapper
+      picture.stock-card__picture
+        each source in stock.sources
+          source(media=source.media, srcset=source.srcset)
+        img.stock-card__image(src=stock.image.src, srcset=stock.image.srcset, alt=stock.image.alt, width='130', height='130')

@@ -1,0 +1,12 @@
+extends layouts/layout.pug
+
+append variables
+  - var title = "Акции"
+  - var currentPage = "all-stocks-page"
+  - var isAuthorized = false
+  - var headline = "Акции"
+
+block content
+  main(class=currentPage)
+    include ./includes/breadcrumbs.pug
+    include ./includes/stock/stock-layout.pug

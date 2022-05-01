@@ -103,3 +103,21 @@
     border-bottom-right-radius: 6px;
   }
 }
+
+/* Stock Wrapper */
+
+.section__stock-wrapper {
+  margin-top: 20px;
+}
+
+@media (min-width: 37.5em) { /* 600px */
+  .section__stock-wrapper {
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 56.25em) { /* 900px */
+  .section__stock-wrapper {
+    margin-top: 40px;
+  }
+}

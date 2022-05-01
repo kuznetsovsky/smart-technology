@@ -1,0 +1,33 @@
+/* Stock */
+
+.stock {
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+@media (min-width: 42.5em) {
+  .stock {
+    padding-bottom: 60px;
+  }
+}
+
+@media (min-width: 72.5em) {
+  .stock {
+    padding-bottom: 80px;
+  }
+}
+
+/* Pagination Wrapper */
+
+.stock__pagination-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+@media (min-width: 42.5em) {
+  .stock__pagination-wrapper {
+    margin-top: 30px;
+  }
+}

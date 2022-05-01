@@ -1,0 +1,14 @@
+include ./stock-data.pug
+include ./stock-card.pug
+
+section.stock
+  .container
+    h2.headline Акции
+
+    ul.stock-list
+      each stock in allStock
+        li.stock-list__item
+          +stock-card(stock)
+
+    .stock__pagination-wrapper
+      include ../pagination.pug

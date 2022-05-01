@@ -1,0 +1,28 @@
+/* Stock List */
+
+.stock-list {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(1, 1fr);
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@media (min-width: 42.5em) {
+  .stock-list {
+    grid-gap: 20px;
+  }
+}
+
+@media (min-width: 72.5em) {
+  .stock-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Stock Item */
+
+.stock-list__item {
+  display: flex;
+}
