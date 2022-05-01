@@ -1,0 +1,49 @@
+/* Rating */
+
+.rating {
+  position: relative;
+  width: 128px;
+  height: 24px;
+}
+
+/* Rating List */
+
+.rating__list {
+  display: grid;
+  grid-template-columns: repeat(5, 24px);
+  align-items: center;
+  justify-content: space-between;
+  width: 128px;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* Rating Item */
+
+.rating__item {
+  width: 24px;
+  height: 24px;
+}
+
+/* Rating Item: Base */
+
+.rating__item--base {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 20' fill='%23EAEAF0' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 0L13.09 6.26L20 7.27L15 12.14L16.18 19.02L10 15.77L3.82 19.02L5 12.14L0 7.27L6.91 6.26L10 0Z'/%3E%3C/svg%3E");
+}
+
+/* Raiting Item: Active */
+
+.rating__item--active {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 20' fill='%23FBB13C' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 0L13.09 6.26L20 7.27L15 12.14L16.18 19.02L10 15.77L3.82 19.02L5 12.14L0 7.27L6.91 6.26L10 0Z'/%3E%3C/svg%3E");
+}
+
+.rating__wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}

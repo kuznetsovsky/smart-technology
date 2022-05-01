@@ -1,0 +1,15 @@
+mixin rating(rating = 100)
+  .rating
+    ul.rating__list
+      li.rating__item.rating__item--base
+      li.rating__item.rating__item--base
+      li.rating__item.rating__item--base
+      li.rating__item.rating__item--base
+      li.rating__item.rating__item--base
+    .rating__wrapper(style={width: `${rating}%`})
+      ul.rating__list
+        li.rating__item.rating__item--active
+        li.rating__item.rating__item--active
+        li.rating__item.rating__item--active
+        li.rating__item.rating__item--active
+        li.rating__item.rating__item--active

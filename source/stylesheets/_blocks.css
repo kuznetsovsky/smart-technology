@@ -18,3 +18,7 @@
 @import "./blocks/content-wrapper";
 @import "./blocks/warranty";
 @import "./blocks/content";
+@import "./blocks/button";
+@import "./blocks/card";
+@import "./blocks/rating";
+@import "./blocks/number-reviews";

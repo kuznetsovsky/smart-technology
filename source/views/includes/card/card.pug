@@ -1,0 +1,44 @@
+include ../rating.pug
+include ../number-reviews.pug
+
+mixin card(product)
+  article.card
+
+    .card__image-wrapper
+      img.card__image(src=product.image, alt='', width='240', height='180')
+      ul.card__tags-list
+        each tag in product.tags
+          if (tag.type === 'new')
+            li.card__tags-item.card__tags-item--new Новинка
+          if (tag.type === 'hit')
+            li.card__tags-item.card__tags-item--hit Хит продаж
+
+    .card__headline-wrapper
+      span.card__type= product.type
+      h3.card__title
+        a.card__link(href='/product-card.html')!= product.title
+
+    .card__content
+      .card__rating
+        +rating(product.rating)
+        .card__reviews
+          +number-reviews(product.reviews)
+      .card__wrapper
+        .card__price-wrapper
+          span.card__old-price #{product.oldPrice}&nbsp;₽
+          span.card__price #{product.price}&nbsp;₽
+          span.card__discount-wrapper
+            span.card__discont-percent #{product.percentDiscount}%
+            |&nbsp;—&nbsp;#{product.discountInRubles}&nbsp;₽
+        .card__actions-wrapper
+          button.button.button--icon.button--stroke(class=product.favorites ? 'button--active' : false)
+            span.sr-only Добавить товар в избранное
+            span.button__icon.button__icon--like
+          button.button.button--icon.button--stroke(class=product.compare ? 'button--active' : false)
+            span.sr-only Добавить товар в сравнение
+            span.button__icon.button__icon--compare
+      .card__buy-wrapper
+        button.button.button--buy Купить в&nbsp;1&nbsp;клик
+        button.card__button-basket.button.button--icon.button--basket(class= product.basket ? 'button--active' : false)
+          span.sr-only Добавить товар в корзину
+          span.button__icon.button__icon--basket

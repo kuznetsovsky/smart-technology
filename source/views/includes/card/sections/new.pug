@@ -1,0 +1,15 @@
+include ../card-data.pug
+include ../card.pug
+
+- var filteredProducts = allProducts.slice(0, 4);
+
+section.section
+  .container
+    h2.headline
+      span.headline__text Новинки
+      a.link(href='/catalog.html') Все&nbsp;товары
+
+    ul.section__product-list
+      each product in filteredProducts
+        li.section__product-item
+          +card(product)
